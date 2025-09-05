@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>공돌이닷컴 · Coming Soon</title>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&family=Orbitron:wght@600&display=swap"
+        rel="stylesheet">
+        <link type="text/css" href="./style.css" rel="stylesheet">
+        <script src="./jquery.1.12.0.min.js"></script>
+        <script src="./jquery.particleground.min.js"></script>
+        <script src="./script.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Section 1: Hero -->
+        <header class="hero" role="banner" aria-label="공돌이닷컴 Coming Soon">
+            <div class="container" style="text-align:center">
+                <h1 class="title">미래를 바꾸는 첫 번째 조립.</h1>
+                <p class="subtitle">만드는 순간, 배움이 기술이 됩니다.
+                    <br>코딩·로봇·달탐사·회로·메이킹 등 교실과 동아리를 위한 실습형 교보재 라인업을 준비 중입니다.</p>
+
+                <div class="grade-shortcut" aria-label="섹션 이동">
+                    <a href="#explore" title="탐색 섹션으로 이동">공개예정정보 보기</a>
+                </div>
+
+            </div>
+            <div id="particles"></div>
+            <div id="mousemove-circle"></div>
+        </header>
+
+        <!-- Section 2: 탐색 + 커리큘럼 -->
+        <section id="explore" aria-labelledby="sec-title">
+            <div class="container">
+                <div class="sec-head">
+                    <div>
+                        <h2 id="sec-title" class="sec-title">무엇을 만들게 되나요?</h2>
+                        <p class="sec-sub">카테고리와 학년별로 라인업을 예고합니다. 모든 정보는 출시 시점에 확정·고시됩니다.</p>
+                    </div>
+
+                    <!-- 학년 필터 -->
+                    <form class="filters" aria-label="학년별 보기 (읽기 전용)">
+                        <input type="radio" name="grade" id="all" checked="checked">
+                        <!-- <label for="all">전체</label> -->
+
+                        <input type="radio" name="grade" id="elem"> <label for="elem">초등</label>
+                        <input type="radio" name="grade" id="mid"> <label for="mid">중등</label> <input
+                        type="radio" name="grade" id="high"> <label for="high">고등</label> <input
+                        type="radio" name="grade" id="uni"> <label for="uni">대학</label>
+                    </form>
+                </div>
+
+                <!-- 카드 그리드 (읽기 전용, 예고 상태) -->
+                <div class="grid">
+                    <!-- 코딩 -->
+                    <article class="card grade-elem" role="article" aria-label="코딩 스타터 키트 (초등)">
+                        <div class="icon" aria-hidden="true">⌨️</div>
+                        <div>
+                            <h3>코딩 스타터 키트 (블록)</h3>
+                            <div class="meta-line">
+                                <span class="tag time">2차시</span>
+                                <span class="tag lvl">1</span>
+                                <span class="tag team">2인 1키트</span>
+                                <span class="soon">예고</span>
+                            </div>
+                            <p class="muted">블록 코딩으로 LED·부저·서보를 제어하며 입력/출력 개념을 자연스럽게 익힙니다.</p>
+                            <div class="res">
+                                <span class="badge disabled">교사용 PDF (공개 예정)</span>
+                                <span class="badge disabled">예제 코드 (공개 예정)</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 로봇 -->
+                    <article
+                        class="card grade-mid grade-high"
+                        role="article"
+                        aria-label="2WD 로봇 로버 (중·고)">
+                        <div class="icon" aria-hidden="true">🤖</div>
+                        <div>
+                            <h3>2WD 로봇 로버 · 센서팩</h3>
+                            <div class="meta-line">
+                                <span class="tag time">3~4차시</span>
+                                <span class="tag lvl">2</span>
+                                <span class="tag team">2인 1키트</span>
+                                <span class="soon">예고</span>
+                            </div>
+                            <p class="muted">초음파·적외선 센서로 *장애물 회피/라인 트레이싱을 실습합니다.</p>
+                            <div class="res">
+                                <span class="badge disabled">교사용 PDF (공개 예정)</span>
+                                <span class="badge disabled">예제 코드 (공개 예정)</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 달탐사선 -->
+                    <article
+                        class="card grade-mid grade-high"
+                        role="article"
+                        aria-label="달탐사 로버 (중·고)">
+                        <div class="icon" aria-hidden="true">🌙</div>
+                        <div>
+                            <h3>달탐사 로버 · 스타터</h3>
+                            <div class="meta-line">
+                                <span class="tag time">3차시</span>
+                                <span class="tag lvl">2</span>
+                                <span class="tag team">2인 1키트</span>
+                                <span class="soon">예고</span>
+                            </div>
+                            <p class="muted">미션 플로우를 설계하고 자율주행 기본을 구현해보는 프로젝트형 키트입니다.</p>
+                            <div class="res">
+                                <span class="badge disabled">교사용 PDF (공개 예정)</span>
+                                <span class="badge disabled">예제 코드 (공개 예정)</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 회로 -->
+                    <article class="card grade-mid" role="article" aria-label="회로·센서 실험팩 (중)">
+                        <div class="icon" aria-hidden="true">🧪</div>
+                        <div>
+                            <h3>회로·센서 실험팩</h3>
+                            <div class="meta-line">
+                                <span class="tag time">2차시</span>
+                                <span class="tag lvl">1</span>
+                                <span class="tag team">2인 1키트</span>
+                                <span class="soon">예고</span>
+                            </div>
+                            <p class="muted">브레드보드로 직병렬·저항·센서 입력을 실습하며 전기 기초를 다집니다.</p>
+                            <div class="res">
+                                <span class="badge disabled">교사용 PDF (공개 예정)</span>
+                                <span class="badge disabled">회로도 (공개 예정)</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 메이킹 -->
+                    <article
+                        class="card grade-high grade-uni"
+                        role="article"
+                        aria-label="메이킹·임베디드 (고·대)">
+                        <div class="icon" aria-hidden="true">🛠️</div>
+                        <div>
+                            <h3>임베디드 메이킹 · 라즈베리파이</h3>
+                            <div class="meta-line">
+                                <span class="tag time">4차시</span>
+                                <span class="tag lvl">3</span>
+                                <span class="tag team">팀 프로젝트</span>
+                                <span class="soon">예고</span>
+                            </div>
+                            <p class="muted">GPIO·네트워킹·간단 웹 대시보드까지—프로토타입을 빠르게 만듭니다.</p>
+                            <div class="res">
+                                <span class="badge disabled">교사용 PDF (공개 예정)</span>
+                                <span class="badge disabled">예제 코드 (공개 예정)</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 커리큘럼 매핑 (요약 스트립) -->
+                <div class="curr" aria-label="교육과정 매핑 요약">
+                    <h4>교육과정 매핑(요약 · 예고)</h4>
+                    <table class="table" role="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">주제</th>
+                                <th scope="col">예시 키트</th>
+                                <th scope="col">권장 학년</th>
+                                <th scope="col">성취 포인트</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>센서·제어</td>
+                                <td>아두이노 센서팩
+                                    <small>(예정)</small>
+                                </td>
+                                <td>중2~고1</td>
+                                <td>입력/출력, 조건/반복</td>
+                            </tr>
+                            <tr>
+                                <td>로봇 구조</td>
+                                <td>2WD 로버
+                                    <small>(예정)</small>
+                                </td>
+                                <td>중3~고2</td>
+                                <td>구동계, 차동, 제어루프</td>
+                            </tr>
+                            <tr>
+                                <td>우주 탐사</td>
+                                <td>달탐사 미션
+                                    <small>(예정)</small>
+                                </td>
+                                <td>고1~대학</td>
+                                <td>미션 플로우, 자율주행</td>
+                            </tr>
+                            <tr>
+                                <td>임베디드</td>
+                                <td>라즈베리파이 스타터
+                                    <small>(예정)</small>
+                                </td>
+                                <td>고2~대학</td>
+                                <td>GPIO, 네트워킹</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <img src="./bg.jpg" class="bg-tech" />
+        </section>
+
+        <footer>
+            <div class="container">
+                <div>(주)TAOS - 공돌이닷컴 · Coming Soon</div>
+                <!-- <div style="margin-top:6px">모든 정보는 출시 시점에 확정·고시됩니다. 가격/구매 링크는 추후
+                공개됩니다.</div> -->
+            </div>
+        </footer>
+    </body>
+</html>
