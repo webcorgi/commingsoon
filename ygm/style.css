@@ -335,7 +335,8 @@ footer {
     transform: translate(-50%,-50%);
     font-size: clamp(80px,20vw,150px);
     font-weight: 900;
-    color: #454026ff;
+    color: #fff7ce;
+    opacity: 0.25;
     user-select: none;
     pointer-events: none;
     white-space: nowrap;
